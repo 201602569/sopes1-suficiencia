@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+            
+    client-grpc:
+        build: ./greeter_client
+        container_name: client-grpc
+        ports:
+            - "80:8090"
+    
+    server-grpc:
+        build: ./greeter_server
+        container_name: server-grpc
+        restart: on-failure
