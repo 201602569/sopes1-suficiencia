@@ -34,7 +34,7 @@ const PersonModel = Mongoose.model("person", {
     required: "Please enter a vaccine"
   }
 });
-app.post("/person", async (request, response) => {
+app.post("/person", async(request, response) => {
     try {
         var person = new PersonModel(request.body);
         var result = await person.save();
