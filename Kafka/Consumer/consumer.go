@@ -70,7 +70,7 @@ func errorOcurrido(err error, msg string) {
 func saveOnServer(req string) {
 	fmt.Println("methood save infected")
 
-	clientOptions := options.Client().ApplyURI("mongodb://35.194.11.222:80")
+	clientOptions := options.Client().ApplyURI("mongodb+srv://chris:amor4219@cluster0.3plrc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 	// Connect to MongoDB
 	client, err := mongo.Connect(context.TODO(), clientOptions)
