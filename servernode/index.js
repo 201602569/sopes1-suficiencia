@@ -2,6 +2,14 @@ const Express = require("express");
 const Mongoose = require("mongoose");
 const BodyParser = require("body-parser");
 
+
+
+const redis = require('redis');
+const client = redis.createClient();
+
+
+
+const client = redis.createClient(port, host);
 var app = Express();
 
 Mongoose.connect('mongodb+srv://chris:amor4219@cluster0.3plrc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
